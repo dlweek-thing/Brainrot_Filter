@@ -1,11 +1,11 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.16">
   <diagram name="Page-1" id="UZV_4YaNEUYJYQrBW2No">
-    <mxGraphModel dx="2273" dy="1856" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2689" dy="2405" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="4fpCLledI54VdnfLR-wk-22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="670" y="510" width="1190" height="580" as="geometry" />
+        <mxCell id="4fpCLledI54VdnfLR-wk-22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="670" y="360" width="1270" height="730" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-39" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
           <mxGeometry x="-990" y="675.91" width="340" height="400" as="geometry" />
@@ -413,8 +413,8 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-17" value="JSON of frame data and confidence data" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="1570" y="885.91" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-23" value="Pipeline part 3: &lt;br&gt;SWE stuff" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1740" y="510" width="120" height="60" as="geometry" />
+        <mxCell id="4fpCLledI54VdnfLR-wk-23" value="Pipeline part 3: &lt;br&gt;SWE stuff" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1820" y="360" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-24" target="4fpCLledI54VdnfLR-wk-38">
           <mxGeometry relative="1" as="geometry" />
@@ -428,15 +428,11 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-27" value="timeframe data" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1550" y="790" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-29" target="4fpCLledI54VdnfLR-wk-49">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="1770" y="630" />
-            </Array>
-          </mxGeometry>
+        <mxCell id="4fpCLledI54VdnfLR-wk-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-29" target="4fpCLledI54VdnfLR-wk-71">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-29" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1710" y="790" width="120" height="60" as="geometry" />
+        <mxCell id="4fpCLledI54VdnfLR-wk-29" value="Threshold value for jumpscare prediction" style="whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1730" y="790" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-33" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="700" y="1520" width="440" height="230" as="geometry" />
@@ -453,7 +449,7 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-36" value="toggle switch for phobia mode" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;direction=north;" vertex="1" parent="1">
           <mxGeometry x="570" y="1440" width="80" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-38" value="YT THUMBNAIL BLOCKING:&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;censor content flagged by the model on the YT homepage&amp;nbsp;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="4fpCLledI54VdnfLR-wk-38" value="THUMBNAIL BLOCKING:&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;censor content flagged by the model on the YT homepage, or under the suggested videos segment for each video page&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
           <mxGeometry x="1190" y="815.91" width="180" height="220" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-39" value="collectively scrape thumbnails from YT home page" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;spacingRight=20;" vertex="1" parent="1">
@@ -474,7 +470,19 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-46" value="BERT-variant for topic modelling" style="ellipse;whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
           <mxGeometry x="320" y="510" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-49" value="YT HOMEPAGE BLOCKING:&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;censor content flagged by the model on the YT homepage&amp;nbsp;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+        <mxCell id="4fpCLledI54VdnfLR-wk-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-49" target="4fpCLledI54VdnfLR-wk-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-49" target="4fpCLledI54VdnfLR-wk-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-49" target="4fpCLledI54VdnfLR-wk-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-49" target="4fpCLledI54VdnfLR-wk-60">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-49" value="VIDEOPORT BLOCKING:&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;censor content flagged by the model on the YT homepage&amp;nbsp;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
           <mxGeometry x="1510" y="520" width="180" height="220" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.375;entryY=1;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-52" target="4fpCLledI54VdnfLR-wk-49">
@@ -487,19 +495,40 @@
           <mxGeometry x="710" y="570.6800000000001" width="120" height="118.64" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-57" value="" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
-          <mxGeometry x="910" y="958.64" width="120" height="60" as="geometry" />
+          <mxGeometry x="680" y="805.91" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-60" target="4fpCLledI54VdnfLR-wk-63">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-60" value="Content gets cut out &lt;br&gt;(ie no sound, no visual )" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="1280" y="680.91" width="180" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-61" value="Audio levels and&amp;nbsp;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="606.36" width="180" height="60" as="geometry" />
+        <mxCell id="4fpCLledI54VdnfLR-wk-80" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-61" target="4fpCLledI54VdnfLR-wk-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-61" value="Audio levels and video opacity are lowered by 90%" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;dashed=1;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="600" width="180" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-62" value="Gaussian blur is applied over images" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="760" y="740.91" width="180" height="220" as="geometry" />
+          <mxGeometry x="807.5" y="815.91" width="180" height="220" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-63" value="TOGGLE FOR VIDEO FILTER" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="1040" y="535.91" width="180" height="220" as="geometry" />
+          <mxGeometry x="1030" y="509.99999999999994" width="180" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-64" value="key shortcut to register video frame with aversion, for use with as condition for model to fine-tune on" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;dashed=1;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
+          <mxGeometry x="1510" y="368.64" width="180" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-79" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-66" target="4fpCLledI54VdnfLR-wk-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-66" value="Warning video with transparency alpha 0.4 is played 5 prior to jumpscare portion&amp;nbsp;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;dashed=1;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="510" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-74" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-71" target="4fpCLledI54VdnfLR-wk-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-71" value="threshold value that can be set by user, begins pre-emptive monitoring at 5% lower than threshold" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1710" y="549.09" width="160.91" height="160.91" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
