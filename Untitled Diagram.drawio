@@ -1,17 +1,17 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.16">
   <diagram name="Page-1" id="UZV_4YaNEUYJYQrBW2No">
-    <mxGraphModel dx="1868" dy="604" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1687" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="PtT7ccRdR9juAuZG76jp-39" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
-          <mxGeometry x="-780" y="650" width="340" height="400" as="geometry" />
+          <mxGeometry x="-790" y="630" width="340" height="400" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-40" value="legend:" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+        <mxCell id="PtT7ccRdR9juAuZG76jp-40" value="Legend:" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;strokeColor=#9673a6;fillColor=#e1d5e7;" vertex="1" parent="1">
           <mxGeometry x="-780" y="650" width="120" height="37.27272727272727" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="-310" y="310" width="640" height="330" as="geometry" />
+        <mxCell id="PtT7ccRdR9juAuZG76jp-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
+          <mxGeometry x="-330" y="240" width="830" height="740" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-56" target="PtT7ccRdR9juAuZG76jp-2">
           <mxGeometry relative="1" as="geometry">
@@ -54,7 +54,7 @@
           <mxGeometry x="-145" y="40" width="185" height="90" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-8" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;User clicks on Video on Youtube, Video link is loading&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-420" y="780" width="210" height="90" as="geometry" />
+          <mxGeometry x="-420" y="1130" width="210" height="90" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-9" value="Pipeline part 1: &lt;br&gt;Data extraction and pre-processing" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-310" y="310" width="120" height="60" as="geometry" />
@@ -77,8 +77,11 @@
         <mxCell id="PtT7ccRdR9juAuZG76jp-21" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;TTS &lt;br&gt;model&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="395" y="400" width="60" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-23" value="Audio&lt;br&gt;content" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="40" y="607.27" width="80" height="80" as="geometry" />
+        <mxCell id="PtT7ccRdR9juAuZG76jp-80" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-23" target="PtT7ccRdR9juAuZG76jp-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-23" value="Audio Spectrogram" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="40" y="690" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-10" target="PtT7ccRdR9juAuZG76jp-26">
           <mxGeometry relative="1" as="geometry">
@@ -86,23 +89,25 @@
             <mxPoint x="80" y="640" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-26" value="audio to spectrogram software" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="40" y="490" width="80" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="PtT7ccRdR9juAuZG76jp-33" target="PtT7ccRdR9juAuZG76jp-32" parent="1">
+        <mxCell id="PtT7ccRdR9juAuZG76jp-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="PtT7ccRdR9juAuZG76jp-63" target="PtT7ccRdR9juAuZG76jp-32" parent="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-32" value="encoded frame data" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="140" y="740" width="80" height="80" as="geometry" />
+        <mxCell id="PtT7ccRdR9juAuZG76jp-32" value="encoded visual data" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="140" y="880" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-33" value="max&amp;nbsp;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+        <mxCell id="PtT7ccRdR9juAuZG76jp-33" value="Frame extraction, max 5k frames" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="140" y="490" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" source="PtT7ccRdR9juAuZG76jp-36" target="PtT7ccRdR9juAuZG76jp-35" parent="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="480" y="530" />
+              <mxPoint x="480" y="920" />
+            </Array>
+          </mxGeometry>
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-35" value="Audio&lt;br&gt;content" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="240" y="600" width="80" height="80" as="geometry" />
+        <mxCell id="PtT7ccRdR9juAuZG76jp-35" value="text content" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="240" y="880" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-36" value="audio to spectrogram software" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="240" y="490" width="80" height="80" as="geometry" />
@@ -134,11 +139,62 @@
         <mxCell id="PtT7ccRdR9juAuZG76jp-53" value="Use Case" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
           <mxGeometry x="-650" y="850" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-55" value="USP&amp;nbsp;" style="triangle;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-560" y="760" width="80" height="80" as="geometry" />
-        </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-56" value="Youtube &lt;br&gt;API" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="140" y="270" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-33" target="PtT7ccRdR9juAuZG76jp-63">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="570" as="sourcePoint" />
+            <mxPoint x="180" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-65" target="PtT7ccRdR9juAuZG76jp-68">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-65" value="if latency &lt;br&gt;still large:" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;rotation=0;flipH=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="590" width="140" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-64" value="Potential &lt;br&gt;change" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;rotation=0;flipH=1;" vertex="1" parent="1">
+          <mxGeometry x="-560" y="760" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-63" value="image compression to 720p or lower" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="140" y="590" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-72" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-68" target="PtT7ccRdR9juAuZG76jp-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-68" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;encoder model &lt;br&gt;to compress &lt;br&gt;image data and reshape input size&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="195" y="700" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-81" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-73" target="PtT7ccRdR9juAuZG76jp-79">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-73" value="Audio timeseries data" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="880" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-77" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-74" target="PtT7ccRdR9juAuZG76jp-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-74" value="if training &lt;br&gt;loss too high" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;rotation=0;flipH=0;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="490" width="200" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-78" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-75" target="PtT7ccRdR9juAuZG76jp-73">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-75" value="&lt;font size=&quot;1&quot;&gt;handle data as timeseries, no augmentation&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-120" y="687.27" width="110" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-26" value="audio to spectrogram software" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="40" y="490" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-79" value="Audio-encded&lt;br&gt;Content" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="30" y="870" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-84" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;alt data format&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="-650" y="710" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="PtT7ccRdR9juAuZG76jp-85" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;smoosh data together&lt;/font&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="-560" y="710" width="90" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
