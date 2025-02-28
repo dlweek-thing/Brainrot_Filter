@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.16">
   <diagram name="Page-1" id="UZV_4YaNEUYJYQrBW2No">
-    <mxGraphModel dx="2909" dy="2704" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2273" dy="1860" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -408,6 +408,9 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-23" value="Pipeline part 3: &lt;br&gt;SWE stuff" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1740" y="635" width="120" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-24" target="4fpCLledI54VdnfLR-wk-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-24" value="thumbnail data" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1410" y="875.91" width="120" height="60" as="geometry" />
         </mxCell>
@@ -432,8 +435,8 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-36" value="toggle switch for phobia mode" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;direction=north;" vertex="1" parent="1">
           <mxGeometry x="570" y="1440" width="80" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-38" value="YT HOMEPAGE BLOCKING:&lt;br&gt;&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
-          <mxGeometry x="1230" y="850" width="180" height="220" as="geometry" />
+        <mxCell id="4fpCLledI54VdnfLR-wk-38" value="YT HOMEPAGE BLOCKING:&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="835.91" width="180" height="220" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-39" value="collectively scrape thumbnails from YT home page" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;spacingRight=20;" vertex="1" parent="1">
           <mxGeometry x="-10" y="160" width="150" height="80" as="geometry" />
