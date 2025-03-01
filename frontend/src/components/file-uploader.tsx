@@ -59,13 +59,13 @@ interface FileUploaderProps extends React.HTMLAttributes<HTMLDivElement> {
    */
   accept?: DropzoneProps["accept"];
 
-  /**
-   * Maximum file size for the uploader.
-   * @type number | undefined
-   * @default 1024 * 1024 * 2 // 2MB
-   * @example maxSize={1024 * 1024 * 2} // 2MB
-   */
-  maxSize?: DropzoneProps["maxSize"];
+  // /**
+  //  * Maximum file size for the uploader.
+  //  * @type number | undefined
+  //  * @default 1024 * 1024 * 2 // 2MB
+  //  * @example maxSize={1024 * 1024 * 2} // 2MB
+  //  */
+  // maxSize?: DropzoneProps["maxSize"];
 
   /**
    * Maximum number of files for the uploader.
@@ -101,7 +101,7 @@ export function FileUploader(props: FileUploaderProps) {
     accept = {
       "image/*": [],
     },
-    maxSize = 1024 * 1024 * 2,
+    // maxSize = 1024 * 1024 * 2,
     maxFileCount = 1,
     multiple = false,
     disabled = false,
@@ -191,7 +191,7 @@ export function FileUploader(props: FileUploaderProps) {
       <Dropzone
         onDrop={onDrop}
         accept={accept}
-        maxSize={maxSize}
+        // maxSize={maxSize}
         maxFiles={maxFileCount}
         multiple={maxFileCount > 1 || multiple}
         disabled={isDisabled}
@@ -234,13 +234,13 @@ export function FileUploader(props: FileUploaderProps) {
                     Drag {`'n'`} drop files here, or click to select files
                   </p>
                   <p className="text-sm text-muted-foreground/70">
-                    You can upload
+                    {/* You can upload
                     {maxFileCount > 1
                       ? ` ${
                           maxFileCount === Infinity ? "multiple" : maxFileCount
                         }
                       files (up to ${formatBytes(maxSize)} each)`
-                      : ` a file with ${formatBytes(maxSize)}`}
+                      : ` a file with ${formatBytes(maxSize)}`} */}
                   </p>
                 </div>
               </div>

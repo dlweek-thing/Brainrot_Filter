@@ -168,7 +168,6 @@ export default function Home() {
               <div className="grid w-full items-center gap-4">
                 <FileUploader
                   maxFileCount={1}
-                  maxSize={4 * 1024 * 1024}
                   onValueChange={(files) => setFile(files[0])}
                   disabled={isLoading}
                   accept={{
