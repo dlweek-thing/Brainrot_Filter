@@ -1,4 +1,4 @@
-# PyTorch Model API Backend
+# Brainrot Detector
 
 This backend service provides an API to serve a PyTorch model for inference.
 
