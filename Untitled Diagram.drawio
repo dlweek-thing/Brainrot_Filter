@@ -1,11 +1,11 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.16">
   <diagram name="Page-1" id="UZV_4YaNEUYJYQrBW2No">
-    <mxGraphModel dx="2639" dy="1658" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3136" dy="1953" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="4fpCLledI54VdnfLR-wk-22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="640" y="320" width="1300" height="810" as="geometry" />
+          <mxGeometry x="640" y="220" width="1300" height="910" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-39" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
           <mxGeometry x="-990" y="675.91" width="340" height="400" as="geometry" />
@@ -414,7 +414,7 @@
           <mxGeometry x="1570" y="885.91" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-23" value="Pipeline part 3: &lt;br&gt;SWE stuff" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1820" y="360" width="120" height="60" as="geometry" />
+          <mxGeometry x="1820" y="220" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-24" target="4fpCLledI54VdnfLR-wk-38">
           <mxGeometry relative="1" as="geometry" />
@@ -483,19 +483,38 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-49" target="4fpCLledI54VdnfLR-wk-66">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1490" y="581" />
+              <mxPoint x="1490" y="545" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-49" target="4fpCLledI54VdnfLR-wk-60">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-49" target="4fpCLledI54VdnfLR-wk-82">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1490" y="581" />
+              <mxPoint x="1490" y="455" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-49" target="4fpCLledI54VdnfLR-wk-110">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1490" y="581" />
               <mxPoint x="1490" y="365" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1.006;entryY=0.596;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-49" target="4fpCLledI54VdnfLR-wk-115">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1490" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1490" y="581" />
+              <mxPoint x="1490" y="272" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -508,8 +527,13 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-52" value="segmentation&lt;br&gt;data" style="whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="1410" y="790" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-56" target="4fpCLledI54VdnfLR-wk-92">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="4fpCLledI54VdnfLR-wk-93" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.375;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-56" target="4fpCLledI54VdnfLR-wk-92">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="400" />
+              <mxPoint x="718" y="400" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-56" value="USER HAS DISCRETIONAL CONTROL OVER JUMPSCARES&lt;br&gt;:D" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
           <mxGeometry x="670" y="530.6800000000001" width="120" height="118.64" as="geometry" />
@@ -577,7 +601,7 @@
           <mxGeometry x="830" y="529.32" width="180" height="121.36" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-92" value="Bonus: Data can be collected and packaged as a data product for customer base preference BI&amp;nbsp;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
-          <mxGeometry x="640" y="178.64" width="180" height="121.36" as="geometry" />
+          <mxGeometry x="650" y="238.64" width="180" height="121.36" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-98" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.625;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-94" target="4fpCLledI54VdnfLR-wk-96">
           <mxGeometry relative="1" as="geometry" />
@@ -628,8 +652,11 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-110" value="Timeframe markers on the actual video timeline like ad markers&amp;nbsp;&amp;nbsp;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;dashed=1;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
           <mxGeometry x="1280" y="330" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-115" value="captions are&amp;nbsp;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;dashed=1;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="220" width="180" height="70" as="geometry" />
+        <mxCell id="4fpCLledI54VdnfLR-wk-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-115" target="4fpCLledI54VdnfLR-wk-63">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-115" value="captions are automatially turned on when audio gets cut" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;dashed=1;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="230" width="180" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
