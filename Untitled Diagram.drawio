@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.16">
   <diagram name="Page-1" id="UZV_4YaNEUYJYQrBW2No">
-    <mxGraphModel dx="3155" dy="1760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3226" dy="2006" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -56,7 +56,7 @@
           <mxGeometry x="240" y="390" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-7" value="&lt;font style=&quot;font-size: 40px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Base Use Case: &lt;/b&gt;&lt;br&gt;user clicks on Video on Youtube, Video link is loads in&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;alt: YT homepage loads in&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;spacingTop=10;spacingBottom=10;" parent="1" vertex="1">
-          <mxGeometry x="-180" y="-70" width="545" height="170" as="geometry" />
+          <mxGeometry x="-180" y="-110" width="545" height="210" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-8" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;User clicks on Video on Youtube, Video link is loading&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-420" y="1130" width="210" height="90" as="geometry" />
@@ -160,7 +160,7 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-56" target="4fpCLledI54VdnfLR-wk-43">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="580" y="282" />
+              <mxPoint x="570" y="282" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -382,7 +382,7 @@
           <mxGeometry x="-620" y="360" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-7" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;probability for there being a jumpscare in the next 10s (for realtime prediction use case)&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="1450" y="1200" width="100" height="100" as="geometry" />
+          <mxGeometry x="1502.5" y="1175" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-12" value="try with model distillation" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-620" y="220" width="120" height="60" as="geometry" />
@@ -471,7 +471,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-43" value="video titles with channel names" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="540" y="510" width="80" height="80" as="geometry" />
+          <mxGeometry x="530" y="510" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-46" value="BERT-variant for topic modelling" style="ellipse;whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
           <mxGeometry x="320" y="510" width="120" height="80" as="geometry" />
@@ -716,19 +716,7 @@
           <mxGeometry x="294.65999999999997" y="1950" width="100" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-159" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;probability for thumbnail jumpscaring people&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
-          <mxGeometry x="1560" y="1310" width="100" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-160" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="1590" y="1190" width="200" height="200" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-3" value="Timestamps for potential jumpscares, (0,0) for thumbnail if encoded so" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="4fpCLledI54VdnfLR-wk-160">
-          <mxGeometry x="100" width="100" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-8" value="positional data for where specific horror elements are (segmentation/ bounding box)" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="4fpCLledI54VdnfLR-wk-160">
-          <mxGeometry x="100" y="100" width="100" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-11" value="softmaxed value for integer value of chance of softmax" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="4fpCLledI54VdnfLR-wk-160">
-          <mxGeometry width="100" height="100" as="geometry" />
+          <mxGeometry x="1540" y="1290" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-163" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Toggle for Phobia Mode &lt;br&gt;(arachnophobia for general usecase, Bool for now will be Integer for model selection later)&lt;/font&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
           <mxGeometry x="260" y="2525" width="210" height="110" as="geometry" />
@@ -816,6 +804,30 @@
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-192" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="620" y="2320" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-11" value="softmaxed value for integer value of chance of softmax" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1930" y="1320" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-195" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1670" y="1170" width="100" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-3" value="Timestamps for potential jumpscares, (x,y) for thumbnail if encoded so it&#39;ll (0,0)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="4fpCLledI54VdnfLR-wk-195">
+          <mxGeometry width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-8" value="positional data for where specific horror elements are (segmentation/ bounding box)&lt;div&gt;(f,x,z,h,w)&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="4fpCLledI54VdnfLR-wk-195">
+          <mxGeometry y="100" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-196" value="&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&quot;Timeline&quot;: [&lt;/div&gt;&lt;div&gt;(x1,y1),&lt;/div&gt;&lt;div&gt;(x2,y2)],&lt;/div&gt;&lt;div&gt;&quot;Thumbnail&quot; : 73,&lt;/div&gt;&lt;div&gt;&quot;Jumpscare_chance_in_10s&quot;:0&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1810.45" y="980" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-198" value="jump to x" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="840" y="70" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-199" value="disable filter" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="940" y="70" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-200" value="jump to y" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="70" width="80" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
