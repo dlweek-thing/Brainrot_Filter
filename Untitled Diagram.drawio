@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.16">
   <diagram name="Page-1" id="UZV_4YaNEUYJYQrBW2No">
-    <mxGraphModel dx="2985" dy="1863" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3155" dy="1760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -55,7 +55,7 @@
         <mxCell id="PtT7ccRdR9juAuZG76jp-4" value="Text transcript&amp;nbsp;&lt;br&gt;(if available)" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="240" y="390" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-7" value="&lt;font style=&quot;font-size: 40px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Base Use Case: &lt;/b&gt;&lt;br&gt;user clicks on Video on Youtube, Video link is loads in&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;spacingTop=10;spacingBottom=10;" parent="1" vertex="1">
+        <mxCell id="PtT7ccRdR9juAuZG76jp-7" value="&lt;font style=&quot;font-size: 40px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Base Use Case: &lt;/b&gt;&lt;br&gt;user clicks on Video on Youtube, Video link is loads in&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 40px;&quot;&gt;alt: YT homepage loads in&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;strokeColor=default;spacingTop=10;spacingBottom=10;" parent="1" vertex="1">
           <mxGeometry x="-180" y="-70" width="545" height="170" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-8" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;User clicks on Video on Youtube, Video link is loading&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
@@ -127,7 +127,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-35" value="text content&lt;br&gt;(text,rating)" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+        <mxCell id="PtT7ccRdR9juAuZG76jp-35" value="text content&lt;br&gt;(timstamp, text,rating)" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="240" y="880" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-43" value="data" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
@@ -665,25 +665,7 @@
           <mxGeometry x="-585" y="1930" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-122" value="3 models, weak stacking ensemble method for decision making for each timestep" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="565" y="2040" width="170" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-123" value="1 multimodal transformer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="565" y="2180" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-124" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="705" y="2320" width="440" height="230" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-125" value="phobia module, added to the ensemble to shift biases, will have greater voting power" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="4fpCLledI54VdnfLR-wk-124">
-          <mxGeometry width="440" height="230" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-126" value="Model Toggle:" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4fpCLledI54VdnfLR-wk-124">
-          <mxGeometry x="20" y="20" width="60" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="4fpCLledI54VdnfLR-wk-128" target="4fpCLledI54VdnfLR-wk-125" parent="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-128" value="toggle switch for phobia mode" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;direction=north;" vertex="1" parent="1">
-          <mxGeometry x="575" y="2240" width="80" height="100" as="geometry" />
+          <mxGeometry x="1332.5" y="2013" width="170" height="100" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-172" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-134" target="4fpCLledI54VdnfLR-wk-171">
           <mxGeometry relative="1" as="geometry" />
@@ -709,6 +691,9 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-147" value="encoded visual data (vid frames)" style="whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
           <mxGeometry x="295" y="2323" width="100" height="80" as="geometry" />
         </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-194" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-152" target="4fpCLledI54VdnfLR-wk-190">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-152" value="Audio Spectrogram" style="whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
           <mxGeometry x="294.83" y="2053" width="100" height="60" as="geometry" />
         </mxCell>
@@ -723,6 +708,9 @@
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-157" value="text content&lt;br&gt;(text,rating)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="294.66" y="2147" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-193" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-158" target="4fpCLledI54VdnfLR-wk-190">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-158" value="Audio timeseries data" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="294.65999999999997" y="1950" width="100" height="80" as="geometry" />
@@ -798,6 +786,36 @@
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-166" value="Fear of: &lt;br&gt;1. snakes&lt;div&gt;2. little people&lt;/div&gt;&lt;div style=&quot;&quot;&gt;3. drowning&lt;/div&gt;&lt;div style=&quot;&quot;&gt;4. Molluscs (personal)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;5. large loss of blood&lt;/div&gt;&lt;div style=&quot;&quot;&gt;6. Opposite gender (Gynophobia, Androphobia)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;10. Unwanted Infants, scares&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4fpCLledI54VdnfLR-wk-186">
           <mxGeometry x="165" y="30" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-187" value="Timestamps for&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1302.5" y="2170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-188" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1477.5" y="2207" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="4fpCLledI54VdnfLR-wk-128" target="4fpCLledI54VdnfLR-wk-125" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-126" value="Model Toggle:" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="2570" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-128" value="toggle switch for phobia mode" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;direction=north;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="2470" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-123" value="1 multimodal transformer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="2410" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-125" value="phobia module, added to the ensemble to shift biases, will have greater voting power" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="2550" width="440" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-190" value="AudioForm Transformer" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="2000" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-191" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="2207" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-192" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="2320" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
