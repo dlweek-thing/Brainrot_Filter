@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.16">
   <diagram name="Page-1" id="UZV_4YaNEUYJYQrBW2No">
-    <mxGraphModel dx="3136" dy="1953" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2985" dy="1863" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
         <mxCell id="PtT7ccRdR9juAuZG76jp-40" value="Legend:" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;strokeColor=#9673a6;fillColor=#e1d5e7;" parent="1" vertex="1">
           <mxGeometry x="-980" y="695.91" width="120" height="37.27272727272727" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+        <mxCell id="PtT7ccRdR9juAuZG76jp-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" parent="1" vertex="1">
           <mxGeometry x="-330" y="240" width="940" height="850" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="PtT7ccRdR9juAuZG76jp-56" target="PtT7ccRdR9juAuZG76jp-2" edge="1">
@@ -64,8 +64,14 @@
         <mxCell id="PtT7ccRdR9juAuZG76jp-9" value="Pipeline part 1: &lt;br&gt;Data extraction and pre-processing" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-330" y="240" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="PtT7ccRdR9juAuZG76jp-26" target="PtT7ccRdR9juAuZG76jp-23" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="PtT7ccRdR9juAuZG76jp-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="PtT7ccRdR9juAuZG76jp-26" target="PtT7ccRdR9juAuZG76jp-23" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-60" y="590" />
+              <mxPoint x="-130" y="590" />
+              <mxPoint x="-130" y="719" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-10" value="Audio&lt;br&gt;content" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="-100" y="378.64" width="80" height="80" as="geometry" />
@@ -100,7 +106,7 @@
         <mxCell id="PtT7ccRdR9juAuZG76jp-88" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="PtT7ccRdR9juAuZG76jp-32" target="PtT7ccRdR9juAuZG76jp-86" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-32" value="encoded visual data" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+        <mxCell id="PtT7ccRdR9juAuZG76jp-32" value="encoded visual data (vid frames)" style="whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="140" y="880" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-33" value="Frame extraction, max 5k frames" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
@@ -157,6 +163,9 @@
               <mxPoint x="580" y="282" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-141" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="PtT7ccRdR9juAuZG76jp-56" target="PtT7ccRdR9juAuZG76jp-90">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-56" value="Youtube &lt;br&gt;API" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
           <mxGeometry x="140" y="270" width="80" height="80" as="geometry" />
@@ -254,7 +263,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-95" value="encoded visual data" style="whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" parent="1" vertex="1">
+        <mxCell id="PtT7ccRdR9juAuZG76jp-95" value="encoded visual data (thumbnail)" style="whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" parent="1" vertex="1">
           <mxGeometry x="10" y="880" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-99" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="PtT7ccRdR9juAuZG76jp-97" target="PtT7ccRdR9juAuZG76jp-95" edge="1">
@@ -263,11 +272,11 @@
         <mxCell id="PtT7ccRdR9juAuZG76jp-97" value="attention for specific elements of horror" style="ellipse;whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" parent="1" vertex="1">
           <mxGeometry x="30" y="710" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="PtT7ccRdR9juAuZG76jp-104" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="PtT7ccRdR9juAuZG76jp-102" target="PtT7ccRdR9juAuZG76jp-86" edge="1">
+        <mxCell id="PtT7ccRdR9juAuZG76jp-104" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="PtT7ccRdR9juAuZG76jp-102" target="PtT7ccRdR9juAuZG76jp-86" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="100" y="1120" />
-              <mxPoint x="100" y="1120" />
+              <mxPoint x="100" y="1150" />
+              <mxPoint x="180" y="1150" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -330,7 +339,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-124" value="" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" parent="1" vertex="1">
-          <mxGeometry x="1370" y="1130" width="480" height="360" as="geometry" />
+          <mxGeometry x="1370" y="1130" width="480" height="300" as="geometry" />
         </mxCell>
         <mxCell id="PtT7ccRdR9juAuZG76jp-126" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="PtT7ccRdR9juAuZG76jp-125" target="PtT7ccRdR9juAuZG76jp-85" edge="1">
           <mxGeometry relative="1" as="geometry" />
@@ -363,9 +372,6 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-1" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Model output&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="1420" y="1145" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-3" value="Timestamps for potential jumpscares, (0,0) for thumbnail if encoded so" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
-          <mxGeometry x="1540" y="1190" width="100" height="100" as="geometry" />
-        </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-4" value="API ratelimit is just 5 per min so easier" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-620" y="460" width="120" height="60" as="geometry" />
         </mxCell>
@@ -375,14 +381,8 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-5" value="completes process in 1s for YT home page and sugggested portion" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-620" y="360" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-7" value="threshold for there being a jumpscare in the next 10s (for realtime prediction use case)" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="1670" y="1190" width="110" height="110" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-8" value="positional data for where specific horror elements are (segmentation/ bounding box)" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="1540" y="1290" width="100" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-11" value="softmaxed value for integer value of chance of softmax" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="1440" y="1190" width="100" height="100" as="geometry" />
+        <mxCell id="4fpCLledI54VdnfLR-wk-7" value="&lt;font style=&quot;font-size: 11px;&quot;&gt;probability for there being a jumpscare in the next 10s (for realtime prediction use case)&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="1200" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-12" value="try with model distillation" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="-620" y="220" width="120" height="60" as="geometry" />
@@ -390,7 +390,7 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-15" target="4fpCLledI54VdnfLR-wk-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-15" value="API&amp;nbsp; pre-processing" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="4fpCLledI54VdnfLR-wk-15" value="API&amp;nbsp; &lt;br&gt;handling" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1570" y="995.91" width="80" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-17" target="4fpCLledI54VdnfLR-wk-24">
@@ -413,7 +413,7 @@
         <mxCell id="4fpCLledI54VdnfLR-wk-17" value="JSON of frame data and confidence data" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="1570" y="885.91" width="80" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="4fpCLledI54VdnfLR-wk-23" value="Pipeline part 3: &lt;br&gt;SWE stuff" style="rounded=0;whiteSpace=wrap;html=1;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+        <mxCell id="4fpCLledI54VdnfLR-wk-23" value="Pipeline part 3: &lt;br&gt;SWE stuff, mostly backend" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="1">
           <mxGeometry x="1820" y="220" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="4fpCLledI54VdnfLR-wk-24" target="4fpCLledI54VdnfLR-wk-38">
@@ -657,6 +657,102 @@
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-115" value="captions are automatially turned on when audio gets cut" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;strokeWidth=1;dashed=1;spacingLeft=20;spacingRight=20;" vertex="1" parent="1">
           <mxGeometry x="1280" y="230" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-119" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="260" y="1930" width="1085" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-120" value="Part 2 Detailed: Model Architecture" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-585" y="1930" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-122" value="3 models, weak stacking ensemble method for decision making for each timestep" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="2040" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-123" value="1 multimodal transformer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="565" y="2180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-124" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="705" y="2320" width="440" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-125" value="phobia module, added to the ensemble to shift biases, will have greater voting power" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="4fpCLledI54VdnfLR-wk-124">
+          <mxGeometry width="440" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-126" value="Model Toggle:" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="4fpCLledI54VdnfLR-wk-124">
+          <mxGeometry x="20" y="20" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" source="4fpCLledI54VdnfLR-wk-128" target="4fpCLledI54VdnfLR-wk-125" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-128" value="toggle switch for phobia mode" style="shape=dataStorage;whiteSpace=wrap;html=1;fixedSize=1;direction=north;" vertex="1" parent="1">
+          <mxGeometry x="575" y="2240" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-134" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;Model Input&lt;br&gt;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;sample&lt;/font&gt;&lt;/div&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="-52.5" y="2200" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-135" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-1690" y="1930" as="sourcePoint" />
+            <mxPoint x="2605" y="1930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-142" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;alt solution: add weight in front or use separate model&lt;/font&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=1;flipV=1;base=30;flipH=1;direction=south;size=10;position=0.46;" vertex="1" parent="1">
+          <mxGeometry x="-79.66" y="600" width="99.66" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-143" value="concat thumbnail as 0, multiply vector by 100" style="whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="294.83" y="2336.36" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-144" value="encoded visual data (thumbnail)" style="whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="294.83" y="2046.3600000000001" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-147" value="encoded visual data (vid frames)" style="whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="295" y="2156.36" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-152" value="Audio Spectrogram" style="whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="295" y="1961.3600000000001" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-153" value="encoded visual data (vid frames)" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="2486.3599999999997" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-155" value="Audio-encded&lt;br&gt;Content" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="-560" y="2465" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-156" value="encoded visual data (thumbnail)" style="whiteSpace=wrap;html=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="-440" y="2486.3599999999997" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-157" value="text content&lt;br&gt;(text,rating)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="295" y="2266.36" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-158" value="Audio timeseries data" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="294.83" y="2406.36" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-159" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;probability for thumbnail jumpscaring people&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
+          <mxGeometry x="1560" y="1310" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-160" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="1590" y="1190" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-3" value="Timestamps for potential jumpscares, (0,0) for thumbnail if encoded so" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="4fpCLledI54VdnfLR-wk-160">
+          <mxGeometry x="100" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-8" value="positional data for where specific horror elements are (segmentation/ bounding box)" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="4fpCLledI54VdnfLR-wk-160">
+          <mxGeometry x="100" y="100" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-11" value="softmaxed value for integer value of chance of softmax" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;" vertex="1" parent="4fpCLledI54VdnfLR-wk-160">
+          <mxGeometry width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-163" value="&lt;span style=&quot;font-size: 20px;&quot;&gt;user Toggle for Phobia Mode (default on arachnophobia for general usecase)&lt;/span&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="2550" width="290" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-164" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="275" y="2750" width="465" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-165" value="Phobia Model possible variants: non-social based fears" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="2780" width="125" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-166" value="Fear of: &lt;br&gt;1. snakes&lt;div&gt;2. little people&lt;/div&gt;&lt;div style=&quot;&quot;&gt;3. drowning&lt;/div&gt;&lt;div style=&quot;&quot;&gt;4. Molluscs (personal)&lt;/div&gt;&lt;div style=&quot;&quot;&gt;5. large loss of blood&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="2760" width="125" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="4fpCLledI54VdnfLR-wk-167" value="General Horror themes to censor:&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1.&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="325" y="2940" width="125" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
