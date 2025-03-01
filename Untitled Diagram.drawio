@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36" version="26.0.16">
   <diagram name="Page-1" id="UZV_4YaNEUYJYQrBW2No">
-    <mxGraphModel dx="2921" dy="1825" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2810" dy="1759" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -716,7 +716,7 @@
           <mxGeometry x="294.65999999999997" y="1950" width="100" height="80" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-159" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;probability for thumbnail jumpscaring people&lt;/span&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;dashed=1;spacingLeft=10;spacingRight=10;" vertex="1" parent="1">
-          <mxGeometry x="1540" y="1290" width="100" height="100" as="geometry" />
+          <mxGeometry x="1502.5" y="1290" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="4fpCLledI54VdnfLR-wk-163" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Toggle for Phobia Mode &lt;br&gt;(arachnophobia for general usecase, Bool for now will be Integer for model selection later)&lt;/font&gt;" style="shape=process;whiteSpace=wrap;html=1;backgroundOutline=1;" vertex="1" parent="1">
           <mxGeometry x="260" y="2525" width="210" height="110" as="geometry" />
