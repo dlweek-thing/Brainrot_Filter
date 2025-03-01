@@ -54,7 +54,7 @@ except Exception as e:
 
 
 # V1 Base model, turned off post method decorator for now
-# @app.post("/predict")
+ @app.post("/predict")
 async def predict(file: UploadFile):
     # Check if it's a video file
     valid_extensions = [".mp4", ".avi", ".mov", ".mkv", ".webm"]
@@ -126,12 +126,15 @@ async def predict(file: UploadFile):
             sorted_detections = sorted(
                 object_detections.items(), key=lambda x: x[1], reverse=True
             )
+            
             detection_summary = ", ".join(
                 [f"{name}: {count}" for name, count in sorted_detections[:5]]
             )
         else:
             detection_summary = "YOLOv5 model not loaded, only providing video info"
 
+        skibidi_score = predict_skibidi_score(UploadFile)
+        
         # Release resources
         cap.release()
 
@@ -141,7 +144,7 @@ async def predict(file: UploadFile):
         # Return video info and object detection results
         return {
             "prediction": (
-                f"Objects detected: {detection_summary}"
+                f"Objects detected: {detection_summary} \n Skibidi Score: {skibidi_score:.2f}"
                 if object_detections
                 else "No objects detected"
             ),
@@ -164,9 +167,7 @@ async def predict(file: UploadFile):
 
 
 # V2 Base model, turned off post method decorator for now
-@app.post("/predict")
-async def predict(video_path):  # originally named predict_skibidi_scoreV2
-
+def predict_skibidi_score(video_path):
     # Create the output directory if it doesn't exist
     output_dir = "./tempstor_images"
     os.makedirs(output_dir, exist_ok=True)
