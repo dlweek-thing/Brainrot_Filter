@@ -1,27 +1,21 @@
-from fastapi import FastAPI, File, UploadFile, HTTPException
+from fastapi import FastAPI, File, UploadFile, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-import torch
+from fastapi.responses import StreamingResponse
 import os
 import tempfile
 import shutil
 import cv2
-from datetime import timedelta
 from pathlib import Path
-import requests
 from inference_sdk import InferenceHTTPClient
 import pandas as pd
-
-
-from deploy import predict_skibidi_score
+import asyncio
+import json
+import uuid
+from typing import Dict, Any
 
 app = FastAPI()
 
-# Create models directory if it doesn't exist
-models_dir = Path("models")
-models_dir.mkdir(exist_ok=True)
-weights_path = models_dir / "yolov5s.pt"
-
-# Enable CORS for frontend
+# Enable CORS for frontend with proper settings for SSE
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
@@ -30,32 +24,23 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load pre-trained YOLOv5 model
-try:
-    # Download weights file if it doesn't exist
-    if not weights_path.exists():
-        print("Downloading YOLOv5s weights for the first time...")
-        url = "https://github.com/ultralytics/yolov5/releases/download/v6.1/yolov5s.pt"
-        response = requests.get(url, stream=True)
-        with open(weights_path, "wb") as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                if chunk:
-                    f.write(chunk)
-        print(f"Weights saved to {weights_path}")
-
-    # Load YOLOv5 model with local weights
-    print(f"Loading model with weights from: {weights_path}")
-    model = torch.hub.load("ultralytics/yolov5", "custom", path=str(weights_path))
-    model.eval()
-    print("YOLOv5 model loaded successfully")
-except Exception as e:
-    print(f"Error loading YOLOv5 model: {e}")
-    model = None
+# Store for progress tracking
+progress_store: Dict[str, Dict[str, Any]] = {}
 
 
-# V1 Base model, turned off post method decorator for now
- @app.post("/predict")
+@app.post("/predict")
 async def predict(file: UploadFile):
+    # Generate unique ID for this prediction
+    prediction_id = str(uuid.uuid4())
+
+    # Initialize progress in store
+    progress_store[prediction_id] = {
+        "status": "processing",
+        "progress": 0,
+        "message": "Starting video processing",
+        "result": None,
+    }
+
     # Check if it's a video file
     valid_extensions = [".mp4", ".avi", ".mov", ".mkv", ".webm"]
     file_extension = os.path.splitext(file.filename)[1].lower()
@@ -82,151 +67,266 @@ async def predict(file: UploadFile):
         frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
         duration_seconds = frame_count / fps if fps > 0 else 0
 
-        # Format duration as HH:MM:SS
-        duration = str(timedelta(seconds=int(duration_seconds)))
-
-        # Sample frames for YOLO processing
-        object_detections = {}
-        frame_skip = max(1, int(fps))  # Process 1 frame per second
-        frame_count = 0
-
-        if model is not None:
-            while True:
-                ret, frame = cap.read()
-                if not ret:
-                    break
-
-                # Process every Nth frame
-                if frame_count % frame_skip == 0:
-                    # Convert BGR to RGB
-                    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-                    # Run YOLO detection
-                    results = model(rgb_frame)
-
-                    # Extract detection results
-                    detections = results.pandas().xyxy[0]
-                    for _, detection in detections.iterrows():
-                        class_name = detection["name"]
-                        confidence = detection["confidence"]
-
-                        if confidence > 0.5:  # Only count high confidence detections
-                            if class_name in object_detections:
-                                object_detections[class_name] += 1
-                            else:
-                                object_detections[class_name] = 1
-
-                frame_count += 1
-
-                # Limit to processing first 30 seconds for quick results
-                if frame_count >= fps * 30:
-                    break
-
-            # Sort detections by count
-            sorted_detections = sorted(
-                object_detections.items(), key=lambda x: x[1], reverse=True
-            )
-            
-            detection_summary = ", ".join(
-                [f"{name}: {count}" for name, count in sorted_detections[:5]]
-            )
-        else:
-            detection_summary = "YOLOv5 model not loaded, only providing video info"
-
-        skibidi_score = predict_skibidi_score(UploadFile)
-        
         # Release resources
         cap.release()
 
-        # Remove temp file
-        os.unlink(temp_path)
+        # Start skibidi score processing in background
+        asyncio.create_task(
+            process_video_async(
+                temp_path,
+                prediction_id,
+                file.filename,
+                frame_width,
+                frame_height,
+                fps,
+                frame_count,
+                duration_seconds,
+                file.size,
+            )
+        )
 
-        # Return video info and object detection results
-        return {
-            "prediction": (
-                f"Objects detected: {detection_summary} \n Skibidi Score: {skibidi_score:.2f}"
-                if object_detections
-                else "No objects detected"
-            ),
-            "info": {
-                "filename": file.filename,
-                "resolution": f"{frame_width}x{frame_height}",
-                "fps": round(fps, 2),
-                "frames": frame_count,
-                "duration": duration,
-                "file_size_mb": round(file.size / (1024 * 1024), 2),
-                "detections": object_detections,
-            },
-        }
+        # Return prediction ID for tracking progress
+        return {"prediction_id": prediction_id, "message": "Video processing started"}
 
     except Exception as e:
         # Clean up temp file if it exists
         if os.path.exists(temp_path):
             os.unlink(temp_path)
+        progress_store[prediction_id] = {
+            "status": "error",
+            "message": f"Error processing video: {str(e)}",
+        }
         raise HTTPException(status_code=500, detail=f"Error processing video: {str(e)}")
 
 
-# V2 Base model, turned off post method decorator for now
-def predict_skibidi_score(video_path):
-    # Create the output directory if it doesn't exist
-    output_dir = "./tempstor_images"
-    os.makedirs(output_dir, exist_ok=True)
-
-    # Open the video file
-    # video_path = '/content/SnapTik_App_7362440000333565189.mp4'
-    video = cv2.VideoCapture(video_path)
-
-    # Check if the video opened successfully
-    if not video.isOpened():
-        print(f"Error opening video file: {video_path}")
-        exit()
-
-    # Read and save each frame
-    frame_count = 0
-    while True:
-        ret, frame = video.read()
-
-        # Break the loop if the end of the video is reached
-        if not ret:
-            break
-
-        # Save the frame as an image
-        output_path = os.path.join(output_dir, f"frame_{frame_count:04d}.jpg")
-        cv2.imwrite(output_path, frame)
-        frame_count += 1
-
-    # Release the video capture object
-    video.release()
-
-    # print(f"Successfully extracted {frame_count} frames to {output_dir}")
-    CLIENT = InferenceHTTPClient(
-        api_url="https://detect.roboflow.com", api_key="r2EJ6g6arI8b3S7jHK5W"
-    )
-
-    skibidi_score = pd.DataFrame(columns=["has_skib", "w", "h", "total_w", "total_h"])
-
-    for frame in os.listdir("/content/tempstor_images"):
-        # print(frame)
-        result = CLIENT.infer(
-            f"/content/tempstor_images/{frame}", model_id="skibidi-mmt7z/5"
+async def process_video_async(
+    video_path,
+    prediction_id,
+    filename,
+    frame_width,
+    frame_height,
+    fps,
+    frame_count,
+    duration_seconds,
+    file_size,
+):
+    try:
+        # Calculate skibidi score with progress updates
+        skibidi_score = await predict_skibidi_score_with_progress(
+            video_path, prediction_id
         )
-        # print(result)
-        has_skib = 1 if result["predictions"][0]["confidence"] > 0.5 else 0
-        width = result["predictions"][0]["x"]
-        height = result["predictions"][0]["y"]
-        total_w = result["image"]["width"]
-        total_h = result["image"]["height"]
-        skibidi_score.loc[len(skibidi_score)] = [
-            has_skib,
-            width,
-            height,
-            total_w,
-            total_h,
-        ]
 
-    skibidi_score["frame_score"] = skibidi_score["has_skib"] * (
-        (skibidi_score["w"] * skibidi_score["h"])
-        / (skibidi_score["total_w"] * skibidi_score["total_h"])
-    )
+        # Update result
+        progress_store[prediction_id] = {
+            "status": "complete",
+            "progress": 100,
+            "message": "Processing complete",
+            "result": {
+                "prediction": f"Skibidi Score: {skibidi_score:.2f}",
+                "info": {
+                    "filename": filename,
+                    "resolution": f"{frame_width}x{frame_height}",
+                    "fps": round(fps, 2),
+                    "frames": frame_count,
+                    "duration": duration_seconds,
+                    "file_size_mb": round(file_size / (1024 * 1024), 2),
+                    "skibidi_score": skibidi_score,
+                },
+            },
+        }
+    except Exception as e:
+        progress_store[prediction_id] = {
+            "status": "error",
+            "progress": 0,
+            "message": f"Error: {str(e)}",
+        }
+    finally:
+        # Clean up temp file
+        if os.path.exists(video_path):
+            os.unlink(video_path)
 
-    return skibidi_score["frame_score"].mean()
+
+@app.get("/progress/{prediction_id}")
+async def progress(prediction_id: str):
+    # Server-sent events endpoint
+    async def event_generator():
+        while True:
+            if prediction_id not in progress_store:
+                yield f"data: {json.dumps({'status': 'not_found'})}\n\n"
+                break
+
+            progress_data = progress_store[prediction_id]
+            yield f"data: {json.dumps(progress_data)}\n\n"
+
+            # If processing is complete or error occurred, stop sending updates
+            if progress_data["status"] in ["complete", "error"]:
+                # Clean up after some time
+                await asyncio.sleep(60)  # Keep result for 60 seconds
+                if prediction_id in progress_store:
+                    del progress_store[prediction_id]
+                break
+
+            await asyncio.sleep(0.5)  # Update every 0.5 seconds
+
+    return StreamingResponse(event_generator(), media_type="text/event-stream")
+
+
+async def predict_skibidi_score_with_progress(video_path, prediction_id):
+    # Create a temporary directory for frames
+    output_dir = tempfile.mkdtemp(prefix="tempstor_images_")
+
+    # Update progress
+    progress_store[prediction_id] = {
+        "status": "processing",
+        "progress": 5,
+        "message": "Starting video processing",
+    }
+
+    try:
+        # Open the video file
+        video = cv2.VideoCapture(video_path)
+
+        # Check if the video opened successfully
+        if not video.isOpened():
+            raise Exception(f"Error opening video file")
+
+        # Get total frame count for progress tracking
+        total_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
+
+        # Update progress
+        progress_store[prediction_id] = {
+            "status": "processing",
+            "progress": 10,
+            "message": f"Extracting frames from video",
+        }
+
+        # Process at most 300 frames to avoid excessive processing time
+        max_frames_to_process = min(total_frames, 300)
+        frame_step = max(1, total_frames // max_frames_to_process)
+
+        # Read and save each frame
+        frame_count = 0
+        frames_saved = 0
+
+        while True:
+            ret, frame = video.read()
+
+            # Break the loop if the end of the video is reached
+            if not ret:
+                break
+
+            # Only save every Nth frame to reduce processing time
+            if frame_count % frame_step == 0:
+                # Save the frame as an image
+                output_path = os.path.join(output_dir, f"frame_{frame_count:04d}.jpg")
+                cv2.imwrite(output_path, frame)
+                frames_saved += 1
+
+                # Update progress (10-40%)
+                if frame_count % (frame_step * 10) == 0:
+                    progress_pct = 10 + min(30, (frame_count / total_frames) * 30)
+                    progress_store[prediction_id] = {
+                        "status": "processing",
+                        "progress": round(progress_pct),
+                        "message": f"Extracting frames: {frame_count}/{total_frames}",
+                    }
+
+            frame_count += 1
+
+            # Allow other tasks to run
+            if frame_count % 20 == 0:
+                await asyncio.sleep(0)
+
+        # Release the video capture object
+        video.release()
+
+        # Update progress
+        progress_store[prediction_id] = {
+            "status": "processing",
+            "progress": 40,
+            "message": f"Frame extraction complete. Starting inference...",
+        }
+
+        # Initialize inference client
+        CLIENT = InferenceHTTPClient(
+            api_url="https://detect.roboflow.com", api_key="r2EJ6g6arI8b3S7jHK5W"
+        )
+
+        skibidi_score = pd.DataFrame(
+            columns=["has_skib", "w", "h", "total_w", "total_h"]
+        )
+
+        frames_to_process = os.listdir(output_dir)
+        frames_with_predictions = 0
+
+        for i, frame in enumerate(frames_to_process):
+            frame_path = os.path.join(output_dir, frame)
+
+            # Call the inference API
+            result = CLIENT.infer(frame_path, model_id="skibidi-mmt7z/5")
+
+            # Update progress (40-90%)
+            if i % 5 == 0 or i == len(frames_to_process) - 1:
+                progress_pct = 40 + min(50, ((i + 1) / len(frames_to_process)) * 50)
+                progress_store[prediction_id] = {
+                    "status": "processing",
+                    "progress": round(progress_pct),
+                    "message": f"Running inference: {i+1}/{len(frames_to_process)}",
+                }
+
+            # Check if there are any predictions
+            if not result["predictions"]:
+                continue  # Skip frames with no predictions
+
+            frames_with_predictions += 1
+            has_skib = 1 if result["predictions"][0]["confidence"] > 0.5 else 0
+            width = result["predictions"][0]["x"]
+            height = result["predictions"][0]["y"]
+            total_w = result["image"]["width"]
+            total_h = result["image"]["height"]
+
+            skibidi_score.loc[len(skibidi_score)] = [
+                has_skib,
+                width,
+                height,
+                total_w,
+                total_h,
+            ]
+
+            # Allow other tasks to run
+            if i % 5 == 0:
+                await asyncio.sleep(0)
+
+        # Update progress
+        progress_store[prediction_id] = {
+            "status": "processing",
+            "progress": 90,
+            "message": "Calculating final score",
+        }
+
+        # If no frames had predictions, return 0
+        if len(skibidi_score) == 0:
+            return 0
+
+        skibidi_score["frame_score"] = skibidi_score["has_skib"] * (
+            (skibidi_score["w"] * skibidi_score["h"])
+            / (skibidi_score["total_w"] * skibidi_score["total_h"])
+        )
+
+        final_score = skibidi_score["frame_score"].mean()
+
+        # Update progress
+        progress_store[prediction_id] = {
+            "status": "processing",
+            "progress": 95,
+            "message": f"Score calculation complete: {final_score:.4f}",
+        }
+
+        return final_score
+
+    finally:
+        # Clean up temporary files
+        try:
+            shutil.rmtree(output_dir)
+        except Exception:
+            pass

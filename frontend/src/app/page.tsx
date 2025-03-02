@@ -21,12 +21,72 @@ export default function Home() {
   const [backgroundImages, setBackgroundImages] = useState<string[]>([]);
   const [isLoadingImages, setIsLoadingImages] = useState(true);
 
+  // Progress tracking states
+  const [progress, setProgress] = useState(0);
+  const [progressStatus, setProgressStatus] = useState("");
+  const [predictionId, setPredictionId] = useState<string | null>(null);
+
+  // Function to create event source and listen for progress updates
+  const listenForProgress = useCallback((id: string) => {
+    // Close any existing connection
+    const eventSource = new EventSource(`http://localhost:8000/progress/${id}`);
+
+    eventSource.onmessage = (event) => {
+      const data = JSON.parse(event.data);
+
+      if (data.status === "processing") {
+        setProgress(data.progress);
+        setProgressStatus(data.message);
+      } else if (data.status === "complete") {
+        setProgress(100);
+        setProgressStatus("Complete");
+        setPrediction(data.result.prediction);
+        setIsLoading(false);
+        eventSource.close();
+      } else if (data.status === "error") {
+        setProgressStatus(`Error: ${data.message}`);
+        setIsLoading(false);
+        eventSource.close();
+      } else if (data.status === "not_found") {
+        setProgressStatus("Process not found");
+        setIsLoading(false);
+        eventSource.close();
+      }
+    };
+
+    eventSource.onerror = () => {
+      setProgressStatus("Connection error");
+      eventSource.close();
+    };
+
+    return eventSource;
+  }, []);
+
+  // Clean up event source on unmount
+  useEffect(() => {
+    let eventSource: EventSource | null = null;
+
+    if (predictionId) {
+      eventSource = listenForProgress(predictionId);
+    }
+
+    return () => {
+      if (eventSource) {
+        eventSource.close();
+      }
+    };
+  }, [predictionId, listenForProgress]);
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     if (!file) return;
 
     setIsLoading(true);
+    setProgress(0);
+    setProgressStatus("Starting upload...");
+    setPrediction(null);
+
     const formData = new FormData();
     formData.append("file", file);
 
@@ -37,11 +97,18 @@ export default function Home() {
       });
 
       const result = await response.json();
-      console.log(result);
-      setPrediction(result.prediction);
+
+      if (result.prediction_id) {
+        setPredictionId(result.prediction_id);
+        setProgressStatus("Processing started");
+      } else {
+        // Handle direct response (no progress tracking)
+        setPrediction(result.prediction);
+        setIsLoading(false);
+      }
     } catch (error) {
       console.error("Error making prediction:", error);
-    } finally {
+      setProgressStatus("Error uploading file");
       setIsLoading(false);
     }
   }
@@ -210,6 +277,20 @@ export default function Home() {
                 </Button>
               </div>
             </form>
+
+            {/* Progress indicator */}
+            {isLoading && (
+              <div className="mt-4 space-y-2">
+                <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+                  <div
+                    className="h-full bg-black transition-all duration-300 ease-in-out"
+                    style={{ width: `${progress}%` }}
+                  />
+                </div>
+                <p className="text-sm text-gray-500">{progressStatus}</p>
+                <p className="text-sm font-medium">{progress}%</p>
+              </div>
+            )}
           </CardContent>
           {prediction && (
             <CardFooter className="flex flex-col items-start">
