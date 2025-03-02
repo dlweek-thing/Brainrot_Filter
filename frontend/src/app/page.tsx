@@ -223,7 +223,7 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center p-24">
-        <Card className="w-[350px] shadow-xl backdrop-blur-sm bg-white/90">
+        <Card className="w-[450px] shadow-xl backdrop-blur-sm bg-white/90">
           <CardHeader>
             <CardTitle>Video Skibidi Scorer</CardTitle>
             <CardDescription>
